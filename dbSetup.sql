@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS recipes (
     FOREIGN KEY (creatorId) REFERENCES accounts (id) ON DELETE CASCADE
 );
 
-DROP TABLE recipe;
+DROP TABLE recipes;
 
 CREATE TABLE IF NOT EXISTS ingredients (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -37,3 +37,5 @@ CREATE TABLE IF NOT EXISTS ingredients (
     recipeId INT NOT NULL,
     FOREIGN KEY (recipeId) REFERENCES recipes (id) ON DELETE CASCADE
 );
+
+DROP TABLE ingredients;
